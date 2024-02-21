@@ -1,0 +1,47 @@
+/* Searchbar.module.css */
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  background-color: white;
+  color: blue;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: -8px -5px 9px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -8px -5px 9px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: -8px -5px 9px -12px rgba(0, 0, 0, 0.75);
+}
+
+.buttonLabel {
+  margin-left: 5px;
+}
+
+.input {
+  display: flex;
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-box-shadow: -8px -5px 9px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -8px -5px 9px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: -8px -5px 9px -12px rgba(0, 0, 0, 0.75);
+}
+
+.input:focus {
+  outline: none;
+  border-color: white;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
