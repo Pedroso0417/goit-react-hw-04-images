@@ -78,5 +78,3 @@ export const App = () => {
     </div>
   );
 };
-
-export { App };
