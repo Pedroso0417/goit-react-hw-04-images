@@ -20,7 +20,7 @@ const CustomModal = ({ isOpen, imageUrl, onClose }) => {
       </button>
     </Modal>
   );
-};
+}; 
 
 CustomModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,

@@ -19,6 +19,7 @@
   max-width: 80%;
   max-height: 80%;
   overflow: auto;
+   z-index: 1000;
 }
 
 .closeButton {
@@ -27,7 +28,8 @@
   right: 10px;
   font-size: 20px;
   cursor: pointer;
-  background: none;
+  background: rgba(0, 0, 0, 0.5); /* Add a background color */
   border: none;
   color: white;
+  padding: 5px; /* Add padding for better visual appearance */
 }

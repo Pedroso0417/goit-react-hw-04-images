@@ -17,9 +17,9 @@ ImageGallery.propTypes = {
   images: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      url: PropTypes.string.isRequired, // Add other properties of your 'image' object here
+      url: PropTypes.string.isRequired,
       description: PropTypes.string,
-      // ... other properties
+      // Add other properties of your 'image' object here, with or without isRequired
     })
   ).isRequired,
   onImageClick: PropTypes.func.isRequired,
