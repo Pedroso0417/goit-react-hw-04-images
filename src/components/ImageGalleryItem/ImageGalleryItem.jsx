@@ -7,13 +7,18 @@ const ImageGalleryItem = ({ image, onClick }) => {
       className={css.galleryItem}
       onClick={() => onClick(image.largeImageURL)}
     >
-      <img src={image.webformatURL} style={{width:"100%",height:"100%",objectFit:"cover"}} alt="" />{/* object fit property is used to adjust the image in given height */}
+      <img src={image.webformatURL} alt={image.altDescription || ''} />
     </li>
   );
 };
 
 ImageGalleryItem.propTypes = {
-  image: PropTypes.object.isRequired, // Assuming 'image' is an object
+  image: PropTypes.shape({
+    webformatURL: PropTypes.string.isRequired,
+    altDescription: PropTypes.string, // Optional alt description
+    largeImageURL: PropTypes.string.isRequired,
+    // Add more properties as needed
+  }).isRequired,
   onClick: PropTypes.func.isRequired,
 };
 

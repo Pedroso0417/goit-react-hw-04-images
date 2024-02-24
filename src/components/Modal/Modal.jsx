@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
-
 import css from './Modal.module.css';
 
 Modal.setAppElement('#root');
@@ -9,22 +8,21 @@ Modal.setAppElement('#root');
 const CustomModal = ({ isOpen, imageUrl, onClose }) => {
   return (
     <Modal
-      isOpen={isOpen}
+      isOpen={!!isOpen} // Ensure isOpen is treated as a boolean
       onRequestClose={onClose}
       className={css.modal}
       overlayClassName={css.overlay}
-      style={{overflow:"hidden"}} // this style i used to disable the scroll
     >
-      <img src={imageUrl} style={{width:"100%",height:"100%",objectFit:"cover"}}alt="" /> {/* object fit property is used to adjust the image in given height */}
+      <img src={imageUrl} alt="" />
       <button className={css.closeButton} onClick={onClose}>
         &times;
       </button>
     </Modal>
   );
-}; 
+};
 
 CustomModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired, // Updated this line
   onClose: PropTypes.func.isRequired,
   imageUrl: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };

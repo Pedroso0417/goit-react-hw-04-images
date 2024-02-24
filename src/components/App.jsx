@@ -55,7 +55,7 @@ export const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleImageClick = image => {
     console.log('Image Clicked:', image);
-    setSelectedImage(image);{/* you did mistake here  */}
+    setSelectedImage(image);
     setIsModalOpen(true);
   };
 
@@ -66,7 +66,7 @@ export const App = () => {
   };
 
   return (
-    <div className={css.container} >
+    <div className={css.container}>
       <Searchbar className={css.searchbar} onSubmit={handleSearchSubmit} />
       <ImageGallery
         className={css.imageGallery}

@@ -2,20 +2,21 @@
 
 .gallery {
   display: grid;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0;
   margin-left: auto;
   margin-right: auto;
+  padding: 0;
+  margin-bottom: auto;
+  margin-top: auto;
   list-style: none;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
 }
 
-.galleryItem {
+/* .galleryItem {
   cursor: pointer;
   overflow: hidden;
   border-radius: 8px;
+
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -23,4 +24,4 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-}
+} */
