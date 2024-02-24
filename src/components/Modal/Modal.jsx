@@ -13,8 +13,9 @@ const CustomModal = ({ isOpen, imageUrl, onClose }) => {
       onRequestClose={onClose}
       className={css.modal}
       overlayClassName={css.overlay}
+      style={{overflow:"hidden"}} // this style i used to disable the scroll
     >
-      <img src={imageUrl} alt="" />
+      <img src={imageUrl} style={{width:"100%",height:"100%",objectFit:"cover"}}alt="" /> {/* object fit property is used to adjust the image in given height */}
       <button className={css.closeButton} onClick={onClose}>
         &times;
       </button>
